@@ -14,7 +14,11 @@ async function postJson<T>(url: string, data: object): Promise<T> {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
-  return res.json();
+  try {
+    return await res.json();
+  } catch {
+    throw new Error(`서버 오류 (${res.status})`);
+  }
 }
 
 export default function Home() {
@@ -34,26 +38,30 @@ export default function Home() {
     setStep('analyze');
     setStatusMsg('업로드 중...');
 
-    // [1] 업로드
-    const form = new FormData();
-    form.append('file', file);
-    const uploadRes = await fetch('/api/upload', { method: 'POST', body: form });
-    const { blobUrl: url, error: uploadErr } = await uploadRes.json();
-    if (uploadErr) return handleError(uploadErr);
+    try {
+      // [1] 업로드
+      const form = new FormData();
+      form.append('file', file);
+      const uploadRes = await fetch('/api/upload', { method: 'POST', body: form });
+      const { blobUrl: url, error: uploadErr } = await uploadRes.json();
+      if (uploadErr) return handleError(uploadErr);
 
-    setBlobUrl(url);
-    setStatusMsg('얼굴 분석 중...');
+      setBlobUrl(url);
+      setStatusMsg('얼굴 분석 중...');
 
-    // [2] 분석
-    const { faceAnalysis: fa, error: analyzeErr } = await postJson<{
-      faceAnalysis: FaceAnalysis;
-      error?: string;
-    }>('/api/analyze', { blobUrl: url });
-    if (analyzeErr) return handleError(analyzeErr);
+      // [2] 분석
+      const { faceAnalysis: fa, error: analyzeErr } = await postJson<{
+        faceAnalysis: FaceAnalysis;
+        error?: string;
+      }>('/api/analyze', { blobUrl: url });
+      if (analyzeErr) return handleError(analyzeErr);
 
-    setFaceAnalysis(fa);
-    setStep('select');
-    setStatusMsg('스타일을 선택하세요');
+      setFaceAnalysis(fa);
+      setStep('select');
+      setStatusMsg('스타일을 선택하세요');
+    } catch (e) {
+      handleError(e instanceof Error ? e.message : '알 수 없는 오류');
+    }
   }
 
   async function handleStyleSelect(preset: Preset) {
@@ -62,32 +70,36 @@ export default function Home() {
     setStep('generate');
     setStatusMsg(`"${preset.style_name}" 생성 중... (약 1~2분 소요)`);
 
-    // [3] 생성
-    const { frames, error: genErr } = await postJson<{ frames: string[]; error?: string }>(
-      '/api/generate',
-      { blobUrl, styleId: preset.style_id, faceAnalysis }
-    );
-    if (genErr) return handleError(genErr);
+    try {
+      // [3] 생성
+      const { frames, error: genErr } = await postJson<{ frames: string[]; error?: string }>(
+        '/api/generate',
+        { blobUrl, styleId: preset.style_id, faceAnalysis }
+      );
+      if (genErr) return handleError(genErr);
 
-    setStep('composite');
-    setStatusMsg('4컷 합성 중...');
+      setStep('composite');
+      setStatusMsg('4컷 합성 중...');
 
-    // [4] 합성
-    const { resultImage: img, error: compErr } = await postJson<{
-      resultImage: string;
-      error?: string;
-    }>('/api/composite', { frames, styleId: preset.style_id });
-    if (compErr) return handleError(compErr);
+      // [4] 합성
+      const { resultImage: img, error: compErr } = await postJson<{
+        resultImage: string;
+        error?: string;
+      }>('/api/composite', { frames, styleId: preset.style_id });
+      if (compErr) return handleError(compErr);
 
-    setResultImage(img);
-    setStep('done');
+      setResultImage(img);
+      setStep('done');
 
-    // [5] 원본 삭제 (fire-and-forget)
-    fetch('/api/cleanup', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ blobUrl }),
-    });
+      // [5] 원본 삭제 (fire-and-forget)
+      fetch('/api/cleanup', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ blobUrl }),
+      });
+    } catch (e) {
+      handleError(e instanceof Error ? e.message : '알 수 없는 오류');
+    }
   }
 
   function handleError(msg: string) {
