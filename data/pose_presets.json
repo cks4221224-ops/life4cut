@@ -1,0 +1,403 @@
+{
+  "presets": [
+    {
+      "style_id": "dont_look_up_bird_eye",
+      "style_name": "돈룩업 부감샷",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#1a1a1a",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black outer border, thin black dividers, white sans-serif footer text on black bar",
+        "consistency_rule": "same person, overhead bird-eye angle consistent across all frames, only hand gesture and expression vary"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "overhead bird-eye view, 60-90 degrees downward angle, subject looking up at camera, bust to half-body",
+        "lighting_setup": "dramatic side lighting, deep red ambient fill, high contrast with dark shadows",
+        "camera_settings": "wide-angle 24-35mm, deep focus, slight fisheye distortion on edges",
+        "background_env": "deep crimson red geometric cube floor pattern, abstract 3D box illusion, dark vignette edges"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "deep red dominant, cool shadow tones, high contrast, slightly desaturated skin",
+        "quality_boosters": ["photorealistic", "8K", "sharp focus", "dramatic lighting", "editorial fashion photography"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Right arm raised up toward camera with hand making OK or claw gesture, body twisted, face looking up at lens",
+          "expression": "intense and mysterious, lips slightly parted, strong gaze",
+          "controlnet_hint": "overhead view, one arm extended upward toward camera, body diagonal"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "Both hands brought to chin and chest area, body hunched slightly forward, face tilted up toward camera",
+          "expression": "soft contemplative look, eyes gazing directly into lens",
+          "controlnet_hint": "overhead view, hands near face and neck, body compact"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both hands gripping imaginary sunglasses frame, pulling them down nose, leaning toward camera",
+          "expression": "playful smirk, eyes peeking over glasses, teasing expression",
+          "controlnet_hint": "overhead view, both hands at face holding glasses, leaning forward"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "Arms relaxed at sides or slightly open, body upright, face looking straight up into camera",
+          "expression": "cool neutral expression, confident direct gaze, lips closed",
+          "controlnet_hint": "overhead view, arms relaxed, face straight up toward lens"
+        }
+      ],
+      "negative_constraints": "cartoon, anime, upward camera angle, bright cheerful background, warm soft lighting, blurry, low contrast"
+    },
+
+    {
+      "style_id": "dont_look_up_full_body",
+      "style_name": "돈룩업 전신 역동",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#1a1a1a",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black outer border, abstract oil-paint texture overlay on outer frame edges, white footer text on black bar",
+        "consistency_rule": "same person, full-body or half-body, dynamic sprawling poses with strong attitude, background consistent"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "overhead bird-eye view, full body to half body, subject sprawled or leaning dramatically on geometric surface",
+        "lighting_setup": "dramatic red ambient, high contrast studio lighting, deep directional shadows on body contours",
+        "camera_settings": "wide-angle 24mm, deep focus, slight lens distortion",
+        "background_env": "deep crimson red 3D geometric cube floor illusion, abstract corner box, dark vignette surrounding"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "deep red dominant, high contrast, cool shadow undertones, cinematic color grade",
+        "quality_boosters": ["photorealistic", "8K", "editorial high fashion", "dramatic shadow", "cinematic lighting"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Full body sprawled diagonally on geometric floor surface, one arm pointing upward toward camera, body arched backward, face tilted up",
+          "expression": "intense upward gaze, mouth slightly open, fierce and dramatic",
+          "controlnet_hint": "bird-eye overhead, full body diagonal sprawl on floor, one arm pointing up at camera"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "Full body lying curled or arched on geometric surface, both arms close to body, face looking directly up at camera",
+          "expression": "mysterious half-lidded eyes, languid and composed expression",
+          "controlnet_hint": "bird-eye overhead, full body curled on geometric surface, face up"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Half body, leaning forward with one arm extended laterally across the frame, strong shoulder and arm line, body weight on one side",
+          "expression": "fierce sharp gaze, jaw set, confident and powerful",
+          "controlnet_hint": "overhead half-body, one arm extended to side, body leaning, strong diagonal line"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "Half body, both arms extended outward to sides symmetrically, body centered, face looking straight up into camera",
+          "expression": "open challenging gaze, lips neutral, slightly defiant",
+          "controlnet_hint": "overhead half-body, both arms spread wide symmetrically, face straight up"
+        }
+      ],
+      "negative_constraints": "cartoon, standing upright, low angle shot, bright cheerful background, warm smiling expression, blurry, soft lighting"
+    },
+
+    {
+      "style_id": "sailor_moon_close_up",
+      "style_name": "세일러문 클로즈업",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#f9a8d4",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, slightly rounded corners, black footer bar with white Korean text",
+        "consistency_rule": "same person, tight face or bust framing across all frames, only hand gesture and expression change per frame"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust shot to extreme close-up, eye-level to slightly above eye-level, subject centered",
+        "lighting_setup": "soft frontal fill light, pastel warm ambient, minimal harsh shadows, slightly dreamy and luminous quality",
+        "camera_settings": "85mm portrait lens, f/2.0 shallow depth of field, soft background bokeh",
+        "background_env": "soft pastel gradient background — pink, lilac, or sky blue, clean and uncluttered"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "warm soft pastels, slightly high-key exposure, luminous skin tone, dreamy glow on highlights",
+        "quality_boosters": ["photorealistic", "soft beauty photography", "skin luminosity boost", "sharp eye detail", "dreamy romantic atmosphere"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Right arm raised with hand making V-sign (peace sign) held near cheek or beside face, slight body twist toward camera, shoulder raised",
+          "expression": "bright open smile showing teeth, eyes curved in happiness, energetic and cheerful",
+          "controlnet_hint": "bust shot, right hand V-sign raised near face, body slightly twisted"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "One hand raised near mouth with fingertips lightly touching lips, body turned slightly to 3/4 profile, head tilted sideways toward camera",
+          "expression": "soft coy smile, gentle eyes looking sideways with slight shyness",
+          "controlnet_hint": "bust shot, hand near lips, 3/4 side profile, head tilt"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both hands cupping cheeks from below in aegyo style, chin resting lightly on fingertips, body leaning slightly forward",
+          "expression": "eyes squinted in big happy smile, cheeks pushed up, extremely cute and sweet expression",
+          "controlnet_hint": "close-up, both hands cupping cheeks, chin slightly down, leaning forward"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "One hand with index finger lightly touching corner of lips or chin, head slightly tilted to one side, relaxed thoughtful posture",
+          "expression": "playful and slightly pouty, one eyebrow lightly raised, coy and charming look",
+          "controlnet_hint": "bust shot, one finger touching lips or chin, head tilted"
+        }
+      ],
+      "negative_constraints": "dark moody background, harsh directional shadows, serious cold expression, overhead bird-eye angle, full body shot, busy cluttered background"
+    },
+
+    {
+      "style_id": "pikachu_energetic",
+      "style_name": "피카츄 에너지 네컷",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#facc15",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, rounded corners, black footer bar with white Korean text",
+        "consistency_rule": "same person, bright cheerful energy across all frames, background color shifts slightly per frame, gesture and expression vary"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust shot to medium close-up, slightly above eye-level flattering angle, subject centered",
+        "lighting_setup": "bright high-key studio lighting, soft frontal fill, even and warm, no harsh shadows",
+        "camera_settings": "50-85mm, f/2.0-2.8, soft background blur",
+        "background_env": "bright solid color — warm yellow, sky blue, or soft mint, clean seamless backdrop"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "bright warm yellows and soft blues, high saturation, cheerful and youthful palette, high-key exposure",
+        "quality_boosters": ["photorealistic", "bright studio lighting", "clear sharp focus on face", "vibrant colors", "natural skin texture"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "One hand raised high above head waving enthusiastically, elbow extended, body upright with slight lean forward, other arm relaxed at side",
+          "expression": "huge bright smile showing teeth, eyes curved into crescents from happiness, full-body energetic greeting",
+          "controlnet_hint": "bust shot, one arm raised high waving, body upright, leaning slightly"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "One hand raised to cover mouth lightly with fingers, elbow bent outward, body relaxed and natural",
+          "expression": "suppressed laughing smile, eyes squinting with mischief and amusement, slightly sly grin",
+          "controlnet_hint": "bust shot, one hand lightly over mouth, elbow out"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both hands pressed flat against cheeks simultaneously, cheeks gently squished inward, shoulders raised in an excited shrug",
+          "expression": "exaggerated cute shock or overwhelming happiness, wide round eyes, mouth in small open O shape",
+          "controlnet_hint": "close-up, both hands pressing cheeks, shoulders raised, face squished gently"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "One hand raised with fingers spread open covering one side of mouth in a laughing gesture, body tilted back slightly",
+          "expression": "loud open laugh, head tilting back slightly, eyes almost closed from laughing, joyful and uninhibited",
+          "controlnet_hint": "bust shot, one hand beside open laughing mouth, head tilted back"
+        }
+      ],
+      "negative_constraints": "dark moody lighting, serious or cold expression, overhead camera angle, dark background, low saturation, harsh shadows, full body only"
+    },
+
+    {
+      "style_id": "kuromi_edgy_cute",
+      "style_name": "쿠로미 엣지 큐트",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#7c3aed",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, rounded corners, black footer bar with white Korean text",
+        "consistency_rule": "same person, mix of cute and edgy attitude across frames, dark or pastel background varies per frame, gesture and expression distinct"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust shot to medium close-up, eye-level to slightly above, subject centered with slight head tilt",
+        "lighting_setup": "soft contrast lighting, slight cool undertone, gentle shadow on one side of face for dimension",
+        "camera_settings": "85mm, f/2.0-2.4, soft background bokeh",
+        "background_env": "alternating dark purple or black and soft lavender pastel backgrounds, simple and clean"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "cool-toned with purple and dark accents, medium saturation, contrast between cute and edgy moods",
+        "quality_boosters": ["photorealistic", "beauty photography", "sharp face focus", "cool tone color grade", "dimensional soft shadows"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "One hand placed under chin as a chin-rest with index finger pointing upward along cheek, elbow propped, body upright and confident",
+          "expression": "cool and haughty expression, slight smirk, one eyebrow lightly raised, self-assured and a little smug",
+          "controlnet_hint": "bust shot, hand under chin as chin-rest, index finger up along cheek, confident posture"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "Both hands brought together in front of face or chest making a heart shape with thumbs and index fingers, arms framing the face softly",
+          "expression": "exaggerated love-struck expression, wide sparkling eyes, big bright smile, heart eyes energy",
+          "controlnet_hint": "bust shot, both hands making finger heart shape in front of chest or face"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both arms crossed firmly over chest, shoulders slightly raised, body leaning back with confidence",
+          "expression": "unimpressed or defiant expression, eyes narrowed slightly, lips pressed in a flat confident line",
+          "controlnet_hint": "bust shot, arms crossed over chest, shoulders raised, leaning back"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "One hand raised with index finger pointing upward beside face (as if making a sharp point), head tilted to opposite side",
+          "expression": "dramatic wink with one eye, slight tongue-out or sharp smirk, playful but a little menacing",
+          "controlnet_hint": "bust shot, one finger pointing up beside face, head tilt to opposite side, winking"
+        }
+      ],
+      "negative_constraints": "bright warm tones, overly sweet innocent expression, yellow or orange background, soft dreamy lighting without dimension, bland expression"
+    },
+
+    {
+      "style_id": "psyduck_confused_chaos",
+      "style_name": "고라파덕 멍청 네컷",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#60a5fa",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, minimal inner dividers, black footer bar with white Korean text",
+        "consistency_rule": "same person, each frame captures a distinct comedic confused or chaotic reaction, background remains simple and clean"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust shot to medium close-up, eye-level, subject centered",
+        "lighting_setup": "bright even studio lighting, soft frontal fill, minimal shadows, clean and clear",
+        "camera_settings": "50-85mm, f/2.0-2.8, slight background blur",
+        "background_env": "clean light solid color background — white, pale blue, or soft yellow, completely uncluttered"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "warm neutral tones, natural candid feel, soft saturation, bright and clear",
+        "quality_boosters": ["photorealistic", "natural studio lighting", "candid reaction style", "sharp face focus", "clear background separation"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Both hands raised above head in a double wave or flailing gesture, eyes closed, body tilted slightly backward",
+          "expression": "eyes closed with an overwhelmed expression, mouth open in distress or over-excited joy, slightly chaotic energy",
+          "controlnet_hint": "bust shot, both arms raised above head flailing, eyes closed, body tilted back"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "One hand raised to cover the side of the mouth in a conspiratorial whisper gesture, body leaning slightly toward camera, slight head tilt",
+          "expression": "sly squinting smile, mischievous scheming look, eyes narrowed with quiet self-satisfied amusement",
+          "controlnet_hint": "bust shot, one hand cupped beside mouth in whisper gesture, leaning toward camera"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both hands pressed flat on top of head, arms bent at elbows, eyes wide open in exaggerated shock or panic",
+          "expression": "completely overwhelmed panic or shock expression, eyes maximally wide, mouth open in a frozen gasp",
+          "controlnet_hint": "bust shot, both hands flat on top of head, arms bent, eyes wide open"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "Both arms extended outward to sides in a shrug or walking gesture, body slightly leaning to one side, casual stance",
+          "expression": "blank empty stare, mouth slightly open in confused blankness, completely spaced-out vacant look",
+          "controlnet_hint": "bust shot, both arms slightly extended out to sides, blank expression, slight lean"
+        }
+      ],
+      "negative_constraints": "serious composed expression, dramatic moody lighting, dark background, confident posture, editorial fashion style, overhead angle"
+    },
+
+    {
+      "style_id": "bobby_hill_reaction",
+      "style_name": "바비힐 리액션 네컷",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#92400e",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, thin internal dividers, black footer bar with white Korean text",
+        "consistency_rule": "same person, simple indoor domestic background consistent across frames, each frame is a distinct comedic reaction pose"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust to medium shot, eye-level, slightly wide framing to accommodate arm gestures",
+        "lighting_setup": "natural warm indoor lighting, soft window light from one side, casual domestic ambient",
+        "camera_settings": "35-50mm, f/2.8, slight background visible and in soft focus",
+        "background_env": "simple neutral indoor setting — beige or off-white wall, hint of window light, warm casual domestic atmosphere"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "warm neutral tones, natural color grading, slightly desaturated, casual candid snapshot feel",
+        "quality_boosters": ["photorealistic", "natural indoor lighting", "candid casual style", "sharp face focus", "warm ambient color"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Right palm raised flat and pressed firmly against an imaginary wall surface above head, arm fully extended upward, body leaning back slightly, head tilted back",
+          "expression": "wide open mouth in exaggerated shock or disbelief, eyebrows raised high in distress, dramatic surprised reaction",
+          "controlnet_hint": "bust shot, right arm raised and palm flat against wall above head, head tilted back, mouth open"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "One hand brought to chin with index finger and thumb touching chin, elbow slightly bent, relaxed thoughtful posture, subtle forward lean",
+          "expression": "eyes gazing upward and slightly to the side, slight smirk on one corner of mouth, scheming or deeply pondering look",
+          "controlnet_hint": "bust shot, hand to chin thinking pose, eyes looking up and to the side"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "One hand shaped into a finger-gun pointing directly toward camera lens, elbow slightly bent at side, other hand relaxed",
+          "expression": "confident wink with one eye closed, half-smile on one side, playful and self-assured",
+          "controlnet_hint": "bust shot, one hand as finger-gun pointed at camera, winking"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "One hand raised with index finger pointing straight upward beside face, making a decisive point gesture, other arm relaxed",
+          "expression": "smug slight smirk with one corner of mouth lifted, knowing self-satisfied expression, calm confidence",
+          "controlnet_hint": "bust shot, one index finger pointing up beside face, smug expression"
+        }
+      ],
+      "negative_constraints": "bright glamorous background, dramatic fashion lighting, outdoor setting, anime or illustration style, overly styled fashion look, serious cold expression"
+    },
+
+    {
+      "style_id": "spongebob_wholesome_joy",
+      "style_name": "스폰지밥 순수 기쁨 네컷",
+      "generation_mode": "face_preserve",
+      "override_user_outfit": false,
+      "border_color": "#fbbf24",
+      "layout_and_format": {
+        "grid_type": "2x2 quad-panel",
+        "frame_styling": "thick black border, rounded corners, black footer bar with white Korean text",
+        "consistency_rule": "same person, wholesome joyful energy throughout, background bright and simple, each frame expresses a different pure happy emotion"
+      },
+      "composition_and_technical": {
+        "shot_perspective": "bust shot to medium full body, eye-level to slightly above, subject centered with room for arm gestures",
+        "lighting_setup": "bright warm studio lighting, high-key, soft frontal and overhead fill, cheerful and wholesome feel",
+        "camera_settings": "35-50mm, f/2.8-4.0, moderate depth of field to show body gestures clearly",
+        "background_env": "bright warm solid color backgrounds — sunny yellow, sky blue, or clean white, simple and joyful"
+      },
+      "aesthetic_and_post": {
+        "color_grading": "warm sunny yellows and sky blues, high saturation, bright and cheerful, high-key exposure, vibrant and wholesome",
+        "quality_boosters": ["photorealistic", "bright warm studio lighting", "vibrant cheerful colors", "sharp full-body clarity", "natural joyful energy"]
+      },
+      "preset_pose_variants": [
+        {
+          "frame_index": 1,
+          "pose_desc": "Body standing upright in a relaxed neutral pose, arms slightly out from body in a natural resting position, face forward toward camera",
+          "expression": "genuine calm warm smile, soft relaxed eyes, comfortable and content expression, quiet happiness",
+          "controlnet_hint": "medium shot, standing neutral relaxed pose, arms slightly out, facing camera"
+        },
+        {
+          "frame_index": 2,
+          "pose_desc": "Body in a mid-jump position with both arms spread wide open to the sides, legs slightly bent, body caught in upward motion",
+          "expression": "explosive joyful laugh, mouth wide open in pure happiness, eyes almost closed from laughing, total uninhibited joy",
+          "controlnet_hint": "medium shot, both arms spread wide open, body mid-jump, big open laugh"
+        },
+        {
+          "frame_index": 3,
+          "pose_desc": "Both hands raised beside face with palms facing forward and fingers spread wide open in an excited jazz-hands or pom-pom wave gesture, slight forward lean",
+          "expression": "cheeks puffed and pushed up by the big smile, eyes squinted to crescents, enormous delighted grin, face radiating joy",
+          "controlnet_hint": "bust shot, both hands raised beside face with fingers spread wide, cheeks puffed, forward lean"
+        },
+        {
+          "frame_index": 4,
+          "pose_desc": "Both hands clasped together in front of chin or chest, fingers interlaced, elbows slightly out, body tilted upward at about 45 degrees, gaze directed upward with longing",
+          "expression": "dreamy starry-eyed expression, soft hopeful smile, eyes gazing upward in admiration or wishful longing",
+          "controlnet_hint": "bust shot, both hands clasped together at chest or chin, face tilted upward at 45 degrees, dreamy gaze"
+        }
+      ],
+      "negative_constraints": "dark moody lighting, serious or cold expression, overhead camera angle, dark background, low saturation, edgy or cool aesthetic, fashion editorial style"
+    }
+  ]
+}
